@@ -30,7 +30,7 @@ if __name__ == '__main__':
     p.join()
 ```
 
-WWhen we execute this script, it won't exit.
+When we execute this script, it won't exit.
 
 My initial assumption was that I would create child processes for each server and read the file simultaneously. While reading, it would serialize the log entries as JSON and put them into a queue. Then, I would read from the queue one at a time and be done. I would go home happy and satisfied.
 
@@ -39,9 +39,11 @@ My first mistake was `p.start()`. I assumed the main Thread would stay at this l
 The second mistake, `p.join()`, will exit once the function returns. This is a big mistake. It doesn't work that way, especially if it is sharing a pipe/queue with a parent process.
 
 To make the program work, I added additional logic to `p.join()` - 
-    1. adding a timeout value to the `join()` method . 
-    2. checking if the child process has exited (python Process object has exitcode property). 
-    3. checking if the queue is fully read.
+<ol>
+    <li>adding a timeout value to the `join()` method .</li>
+    <li>checking if the child process has exited (python Process object has exitcode property).</li>
+    <li>checking if the queue is fully read.</li>
+</ol>
 
 ```
    while True:
@@ -93,13 +95,12 @@ multiprocessing calls `OpenProcess` with `PROCESS_DUP_HANDLE`, basically creatin
 
 Let's look at the definition of `join` method on python doc
 
-```
-If the optional argument timeout is None (the default), the method blocks until the process whose join() method is called terminates. If timeout is a positive number, it blocks at most timeout seconds. Note that the method returns None if its process terminates or if the method times out. Check the process’s exitcode to determine if it terminated.
 
-A process can be joined many times.
-```
+> If the optional argument timeout is None (the default), the method blocks until the process whose join() method is called terminates. If timeout is a positive number, it blocks at most timeout seconds. Note that the method returns None if its process terminates or if the method times out. Check the process’s exitcode to determine if it terminated.
 
-If `join` is called without timeout(default), it will wait till child process exits.
+> A process can be joined many times.
+
+If `join` is called without timeout(default), it will wait till child process exits (blocking the execution of main thread).
 
 ![PROCESS EXIT](/assets/process_exit.png)
 
