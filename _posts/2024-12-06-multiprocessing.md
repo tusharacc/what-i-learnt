@@ -101,7 +101,7 @@ A process can be joined many times.
 
 If `join` is called without timeout(default), it will wait till child process exits.
 
-![PROCESS EXIT](./images/process_exit.png)
+![PROCESS EXIT](./what-i-learnt/assets/process_exit.png)
 
 There is a row for thread  exit and process exit. Thread `8868` is the main thread and it issues the `ExitProcess`
 
