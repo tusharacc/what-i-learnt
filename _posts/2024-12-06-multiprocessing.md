@@ -55,7 +55,7 @@ To make the program work, I added additional logic to `p.join()` -
 
 I have `procmon` (sysinternal suites) running in background. Take a look at the image below
 
-![PROCESS CREATED](/what-i-learnt/assets/process_created.png)
+![PROCESS CREATED](/assets/process_created.png)
 
 PID 1692 is the parent process. A few lines below, there is a row for Create Process, and in the details section, PID 2612 is mentioned. This is followed by Process Start for 2612, which is the child process created. The immediate next line is Thread create with thread ID 7348.  
 
@@ -101,7 +101,7 @@ A process can be joined many times.
 
 If `join` is called without timeout(default), it will wait till child process exits.
 
-![PROCESS EXIT](/what-i-learnt/assets/process_exit.png)
+![PROCESS EXIT](/assets/process_exit.png)
 
 There is a row for thread  exit and process exit. Thread `8868` is the main thread and it issues the `ExitProcess`
 
@@ -109,7 +109,7 @@ However, in the `never-ending` version of program, there is no thread exit proce
 
 Refer to the image below, there is process getting created and the main thread. But the main thread never exits, and by extension process doesn't exit. It is waiting for `p.join()` to return, however in this case it is blocking. The console will not even accept `CTRL+C`, we need to kill the console or the parent process from another terminal.
 
-![PROCESS DOESNT EXIT](/what-i-learnt/assets/no_exit.png)
+![PROCESS DOESNT EXIT](/assets/no_exit.png)
 
 
 
