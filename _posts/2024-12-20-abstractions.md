@@ -56,12 +56,12 @@ Well, here's the twist, when I started writing the article, I didn't face any is
 
 Initially, I felt it was entirely magic, untill I started peeling onion.
 
-But first, the few tid-bits that I learnt during the whole process
+Few things that I learnt during the whole process - 
 
 1. To enable debugging, execute the command `electron-forge start -l`
-2. Electron-forge uses `debug` module to list the messages while building. The messages can be read at `http://localhost:9000`
-3. The renderer process is served using webserver. So, the electronjs's renderer html can be viewed at `http:localhost:3000`
-4. The standard `index.html` doesn't have the `renderer` file path mentioned. Similarly, the main process javascipt doesn't have `html` file path hard coded. These are generated using webpack
+2. Electron-forge uses `[debug](https://www.npmjs.com/package/debug)` module to list the messages while building. The messages can be read at `http://localhost:9000`
+3. The renderer process is served using webserver. So, the electronjs's renderer html can be viewed at `http://localhost:3000`. Electron-Forge is using `expressjs` to serve the artifacts related to rederer process.
+4. The standard `index.html` doesn't have the `renderer` file path mentioned. Similarly, the main process javascipt doesn't have `html` file path hard coded. These are generated using webpack. Check out `@electron-forge\webpack-plugin`
 5. The `index.js` of main process is everything but english. To understand the code, change `devtool` option to false. It can be done by navigating to `\node_modules\@electron-forge\plugin-webpack\src\WebpackConfig.ts`
 6. Debug can be enabled by setting environment variable `DEBUG=*`, (source from readme of debug package)
 7. In `forge.config.ts`, renderer option has `entryPoints`. This is an array. So, one can include multiple renderer process by defining multiple items in the array.
@@ -94,4 +94,3 @@ SOME_WINDOW_WEBPACK_ENTRY
 ANOTHER_WINDOWS_WEBPACK_ENTRY
 ```
 
-8. 
