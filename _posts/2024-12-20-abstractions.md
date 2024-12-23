@@ -32,7 +32,7 @@ Adding a line `var exports = {}` at the top in `index.js,` resolves the issue.
 
 *What happens if it's just plain old typescript?*, In that case, the line `Object.defineProperty` is also present, but then the keyword `exports` is defined and is an empty object. What's the issue that Electronjs has? Electronjs is a web application encapsulated and presented as a desktop app. It loads the renderer process with a script tag. When a node process executes in a debug mode, vs code will show under local variables `exports`
 
-[Local Variable Exports](/what-i-learnt/assets/node_exports.png)
+![Local Variable Exports](/what-i-learnt/assets/node_exports.png)
 
 The global Object on a browser is called `window`. `Object.keys` will not list anything that is `exports`.
 
