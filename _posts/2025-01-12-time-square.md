@@ -15,7 +15,7 @@ Well, I did learn to split the screen vertically and horizontally, copy from one
 
 The idea was to develop a digital clock to show the date, time, and temperature.
 
-But it has to be different. I decided to align the LCD screen vertically to show the dates.
+But it had to be different. I decided to align the LCD screen vertically to show the dates.
 
 Check the image below to get the idea.
 
@@ -87,7 +87,7 @@ tushar@raspberrypi:~ $ vcgencmd get_throttled
 throttled=0x0
 ```
 
-There was no way to check the exact amperage without buying additional hardware, so I had to chuck it. I could have used a multimeter, but then I just didn't see RPI complaining about overheating, so I chucked it.
+There was no way to check the exact amperage without buying additional hardware, so I had to chuck it. I could have used a multimeter, but I didn't see RPI complaining about overheating, so I abandoned it.
 
 ### LCD Screens
 
@@ -154,10 +154,12 @@ The section on the interface refers to the mapping and function of each pin. I u
 
 ### `kivy`
 
-I find `tkinter` not so fancy. ``qt` is fancy but too complicated. Here comes `kivy`!! I am surprised that I didn't know about kivy, an excellent library for creating desktop apps.
+I find `tkinter` not so fancy. `qt` is fancy but too complicated. Here comes `kivy`!! I am surprised that I didn't know about `kivy`, an excellent library for creating desktop apps.
 
 [Kivy Documentation](https://kivy.org/doc/stable/)
 
 The project has been a roller coaster ride for almost a month, but it felt worth it when I completed it today.
 
 Now, I'm moving on to another project: converting my LED strips to a grow light specification. Until then, have fun!!
+
+> Code can be found at - https://github.com/tusharacc/time-square
