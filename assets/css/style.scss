@@ -1,0 +1,121 @@
+---
+---
+
+@import "minima";
+
+/* ── Global dark theme ──────────────────────────────────────────
+   GitHub Pages uses minima 2.5 which does not honour skin: dark
+   in _config.yml. These overrides enforce the dark palette site-wide.
+   ────────────────────────────────────────────────────────────── */
+
+/* Design tokens */
+:root {
+  --bg:       #0d1117;
+  --surface:  #161b22;
+  --border:   #30363d;
+  --text:     #e6edf3;
+  --muted:    #8b949e;
+  --accent:   #58a6ff;
+  --accent2:  #bc8cff;
+  --cyan:     #39d3ef;
+  --green:    #3fb950;
+  --surface2: #1c2333;
+  --text-muted: #8b949e;
+  --code-bg:  #0d1117;
+  --red:      #f85149;
+  --orange:   #d29922;
+  --yellow:   #d29922;
+  --radius:   8px;
+  --max-w:    820px;
+}
+
+/* Base */
+body {
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+/* Site header */
+.site-header {
+  background-color: #161b22;
+  border-color: #30363d;
+}
+
+.site-title,
+.site-title:visited {
+  color: #e6edf3;
+}
+
+.site-nav .page-link {
+  color: #c9d1d9;
+}
+
+.site-nav .page-link:hover {
+  color: #58a6ff;
+}
+
+/* Mobile nav toggle */
+.site-nav .menu-icon > svg path { fill: #8b949e; }
+
+/* Footer */
+.site-footer {
+  background-color: #161b22;
+  border-color: #30363d;
+  color: #8b949e;
+}
+
+.footer-col-wrapper { color: #8b949e; }
+.footer-col-wrapper a,
+.footer-col-wrapper a:visited { color: #8b949e; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 { color: #e6edf3; }
+
+/* Links */
+a             { color: #58a6ff; }
+a:visited     { color: #bc8cff; }
+a:hover       { color: #79c0ff; }
+
+/* Homepage post listing */
+.post-list-heading     { color: #e6edf3; }
+.post-list h3 a        { color: #e6edf3; }
+.post-list h3 a:visited{ color: #e6edf3; }
+.post-meta             { color: #8b949e; }
+.post-link             { color: #58a6ff; }
+
+/* Post typography */
+.post-header .post-title { color: #e6edf3; }
+.post-content p,
+.post-content li          { color: #e6edf3; }
+
+/* Inline code & pre in non-post pages */
+code {
+  background-color: #1c2333;
+  color: #39d3ef;
+  border: 1px solid #30363d;
+}
+
+pre {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  color: #c4b5fd;
+}
+
+pre > code {
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+/* Blockquotes */
+blockquote {
+  background-color: #161b22;
+  border-left-color: #58a6ff;
+  color: #8b949e;
+}
+
+/* Tables */
+table     { color: #e6edf3; }
+th        { background-color: #1c2333; color: #8b949e; border-color: #30363d; }
+td        { border-color: #30363d; }
+tr:hover  { background-color: #161b22; }
