@@ -1,3 +1,8 @@
+---
+title: "Syntax Trees for Enterprise Code"
+date: 2025-06-06
+---
+
 Any enterprise application would have multiple repositories, and each repository would contain lines of code that may not be easy to understand when examined individually. 
 
 There was a time when I used to Unit Test the module to understand the logic. Now, it's not possible.

@@ -1,4 +1,7 @@
-# Hiring — One Commit at a Time
+---
+title: "Hiring — One Commit at a Time"
+date: 2025-10-07
+---
 
 I have not been happy with the hiring process for a very long time.  
 It’s time-consuming, repetitive, and worst of all — it doesn’t help a candidate grow.  

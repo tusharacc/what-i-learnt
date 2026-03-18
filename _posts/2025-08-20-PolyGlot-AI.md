@@ -1,4 +1,7 @@
-# PolyGlot AI  
+---
+title: "PolyGlot AI"
+date: 2025-08-20
+---
 
 Vibe coding—or pair programming with an AI assistant—is here to stay.  
 

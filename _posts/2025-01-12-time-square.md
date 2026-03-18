@@ -1,3 +1,8 @@
+---
+title: "Time Square — A Raspberry Pi Clock"
+date: 2025-01-12
+---
+
 I had three LCD screens (16x2), one 3.5" RPI display, and two Raspberry Pis lying around and gathering dust. It had been three years since I had worked on an Arduino/Raspberry Pi project. It was time to see how much I still remembered about making circuits work.
 
 As usual, I decided to challenge myself. I put forth two challenges,
