@@ -1,6 +1,8 @@
 theme: minima
 title: What I learnt!
-description: Journal of concepts I learn while programming, building projects, or implementing solutions. 
+description: Journal of concepts I learn while programming, building projects, or implementing solutions.
+url: "https://blogs.tusharsaurabh.com"
+baseurl: ""
 header_pages:
   - about.md
   - portfolio.md
